@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drop Service Website</title>
+  <style>
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #801e00, #E73C7E, #23A6D5, #23D5AB);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .logo {
+      padding-left: 20px;
+
+      font-size: 30px;
+      font-weight: bold;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 1s ease;
+     
+    }
+
+    nav ul li a:hover {
+      color: #ff6b6b;
+      font-size: 20px;
+      
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    .hero p {
+      font-size: 30px;
+      margin-bottom: 20px;
+      animation: dropAnimation 1.5s forwards;
+    }
+.hero mrq p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+ 
+
+    /* Services Section Styles */
+    .services {
+      padding: 80px 0;
+    }
+
+    .services h2 {
+      font-size: 35px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #fff;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    .service-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: dropAnimation 1.5s forwards;
+    }
+.service-card p{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+font-style: italic;
+justify-content: center;
+
+}
+    .service-card {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      width: 300px;
+    
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background-color: #000000;
+      box-shadow: 0px 10px 50px rgb(255, 255, 255);
+    
+    }
+    .service-card:hover p{
+      
+      color: #fff;
+      
+    }
+
+    .service-card:hover h3{
+      
+      color: #fff;
+      
+    }
+.service-card h3{
+color: #000000;
+}
+    .service-card img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    @keyframes dropAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">DropService</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Web Devlopement</h1>
+    <p>From Tailored Websites to Seamless E-Commerce: Offering Comprehensive Web Development Services for a Dynamic Online Presence</p>
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+      <mrq><p>Crafting Digital Experiences: Expert Custom Website Development | Elevate Your Online Presence: E-Commerce Solutions and Online Store Development | Seamless Across Screens: Responsive Web Design for All Devices | Empowering Content Management: Custom Websites Built on CMS Platforms | Beyond Websites: Innovative Web Application Development | Sustaining Excellence: Website Maintenance and Ongoing Support</p>
+      </mrq></marquee>
+  </section>
+  
+  <section id="services" class="services">
+    <h2>Avilable Services</h2>
+    <div class="service-cards-container">
+      <div class="service-card" onclick="openServicePage('LogoDesgin.html')">
+        <img src="webdevlopement.png" alt="Service 1" width="80%">
+        <h3>Custom Website Development</h3>
+<p>Create fully customized websites tailored to the unique needs and goals of businesses and individuals.</p>      
+</div>
+      <div class="service-card" onclick="openServicePage('WebsiteUiDesgin.html')">
+        <img src="ecomrce.png" alt="Service 2" width="65%">
+        <h3>E-Commerce Solutions</h3>
+        <p>Develop online stores with seamless shopping experiences, secure payment gateways, and product management systems</p>
+      </div>
+     
+      <div class="service-card" onclick="openServicePage('GraphicDesgin.html')">
+        <img src="respons.png" alt="Service 3" width="80%">
+        <h3>Responsive Web Design</h3>
+        <p>Offer design services focused on ensuring websites look and function seamlessly across all devices and screen sizes.</p>
+      </div>
+
+      <div class="service-card" onclick="openServicePage('PrintDesign.html')">
+        <img src="wordpress.png" alt="Service 4" width="75%">
+        <h3>CMS Development</h3>
+        <p>Build websites using content management systems like WordPress, making it easy for clients to update and manage their own content</p>
+      </div>
+      <div class="service-card" onclick="openServicePage('BrandingIndentity.html')">
+        <img src="websiteui.png" alt="Service 4" width="65%">
+        <h3>Web Application Development</h3>
+        <p>Design and develop web applications that offer specific functionalities such as booking systems, online tools, and more</p>
+      </div>
+      <div class="service-card" onclick="openServicePage('IllustrationService.html')">
+        <img src="maintainance.png" alt="Service 4"width="50%">
+        <h3>Website Maintenance and Support</h3>
+        <p> Provide ongoing maintenance, updates, and technical support to ensure websites stay secure and up-to-date</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 DropService. All rights reserved.</p>
+  </footer>
+
+
+
+
+  <script>
+   
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function openServicePage(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+  
+</body>
+
+</html>

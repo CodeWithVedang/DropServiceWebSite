@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drop Service Website</title>
+  <style>
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #801e00, #E73C7E, #23A6D5, #23D5AB);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .logo {
+      padding-left: 20px;
+
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 1s ease;
+     
+    }
+
+    nav ul li a:hover {
+      color: #ff6b6b;
+      font-size: 20px;
+      
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    .hero h1 {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    .hero p {
+      font-size: 30px;
+      margin-bottom: 20px;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+ 
+
+    /* Services Section Styles */
+    .services {
+      padding: 80px 0;
+      animation: dropAnimation 1.5s forwards;
+    }
+
+    .services h2 {
+      font-size: 35px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .service-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: dropAnimation 1.5s forwards;
+    }
+.service-card p{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+font-style: italic;
+justify-content: center;
+
+}
+    .service-card {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      width: 300px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background-color: #000000;
+      box-shadow: 0px 10px 50px rgb(255, 255, 255);
+      
+    }
+    .service-card:hover p{
+      
+      color: #fff;
+      
+    }
+    .service-card:hover h3{
+      
+      color: #fff;
+      
+    }
+    .service-card img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    @keyframes dropAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">DropService</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Welcome to DropService</h1>
+    <p>Your one-stop solution for all your service needs!</p>
+    
+  </section>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards-container">
+      <div class="service-card" onclick="openServicePage('Design/service1.html')">
+        <img src="design.png" alt="Service 1" width="80%">
+        <h3>Design</h3>
+        <p>Elevate your brand with our expert Design Services! From captivating logos to eye-catching pamphlets, we turn your vision into impactful visuals that leave a lasting impression. Let's bring your creative ideas to life!</p>
+      </div>
+      <div class="service-card" onclick="openServicePage('webdevlopement/webdevlopement.html')">
+        <img src="webdevlopement.png" alt="Service 2" width="400%">
+        <h3>Web Development </h3>
+        <p>Crafting digital brilliance: Our Web Development service blends design and functionality seamlessly. From e-commerce to personal sites, we make your online vision a reality.</p>
+      </div>
+      <!-- Add more service cards here -->
+      <div class="service-card" onclick="openServicePage('/contnentwriting/contentWriting.html')">
+        <img src="contentwriting.png" alt="Service 3" width="80%">
+        <h3>Content Writing</h3>
+        <p>Words that resonate: Explore our Content Writing service. We weave compelling narratives for your brand, creating impactful content that engages and converts. Whether it's captivating blog posts, persuasive copy, or informative articles, our words bring your message to life, leaving a lasting impression on your audience</p>
+      </div>
+
+      <div class="service-card" onclick="openServicePage('/Advertise/advertise.html')">
+        <img src="advertise.png" alt="Service 4">
+        <h3>Advertising</h3>
+        <p>Ready to captivate your audience? Our skilled wordsmiths are here to amplify your brand's voice and influence. From attention-grabbing headlines to persuasive copy, we craft content that engages, educates, and converts.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 DropService. All rights reserved.</p>
+  </footer>
+
+
+
+
+  <script>
+   
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function openServicePage(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+  
+</body>
+
+</html>
